@@ -1,11 +1,11 @@
 # Server port for user service 8081
 server:
-  port: 111
+  port: 8081
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
+    url: jdbc:postgresql://localhost:5432/sample
+    username: root
     password: root
 
   jpa:

@@ -1,7 +1,9 @@
 package com.user.userService.controller;
 
 
-import com.user.userService.model.User;
+import com.user.userService.model.UserUser;
+import com.user.userService.service.UserServiceService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,9 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/user")
 public class UserServiceController {
 
-    @PostMapping
-    public String createUser(@RequestBody User user) {
+    @Autowired
+    private UserServiceService userServiceService;
 
-        return "added";
+    @PostMapping
+    public UserUser createUser(@RequestBody UserUser user) {
+        return userServiceService.addUser(user);
     }
 }

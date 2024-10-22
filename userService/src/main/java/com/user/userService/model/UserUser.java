@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
-public class User {
+public class UserUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -39,7 +39,7 @@ public class User {
     private UUID created_by;
     private UUID updated_by;
 
-    public User() {
+    public UserUser() {
     }
 
     public String getPhone_number() {
